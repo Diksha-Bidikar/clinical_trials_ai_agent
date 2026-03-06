@@ -1,13 +1,13 @@
 # Clinical Trials AI Agent
 
-📖  # Project Overview
+# 📖 Project Overview
 An AI-powered research assistant that discovers, analyzes, and summarizes clinical trials from public biomedical data sources.
 
 This project demonstrates how Large Language Models can augment scientific data pipelines to transform natural language research questions into structured clinical insights.
 
 ---
 
-💡 # Motivation
+# 💡 Motivation
 
 Clinical trial databases contain massive amounts of biomedical data, but exploring them efficiently often requires complex queries and manual analysis.
 
@@ -42,7 +42,7 @@ Retrieved trials are enriched with:
 
 ---
 
-✨ # Key Features
+# ✨ Key Features
 
 Natural Language Clinical Trial Search
 
@@ -96,7 +96,7 @@ The system architecture and AI pipeline design are documented here:
 
 ---
 
-📁 # Project Structure
+# 📁 Project Structure
 ```
 clinical_trials_ai_agent
 │
@@ -122,7 +122,7 @@ clinical_trials_ai_agent
 
 ---
 
-🚀 ## Quick Start
+## 🚀 Quick Start
 
 Follow these steps to run the AI agent locally.
 
@@ -161,7 +161,7 @@ The system will:
 
 ---
 
-📊 ## Example Output
+## 📊 Example Output
 
 The AI agent generates an enriched clinical trial dataset with the following fields:
 
@@ -195,7 +195,7 @@ Data Source: ClinicalTrials.gov API
 
 ---
 
-🎯 # Use Cases
+# 🎯 Use Cases
 
 Biomedical Research
 
@@ -222,7 +222,7 @@ Potential enhancements include:
 
 ---
 
-🔗 Connect With Me
+# 🔗 Connect With Me
 Author: Diksha Bidikar (Master's in Data Science, Rice University) 
 LinkedIn: linkedin.com/in/diksha-bidikar
 Portfolio: https://diksha-bidikar.github.io/

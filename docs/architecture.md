@@ -218,13 +218,20 @@ The final output contains:
 
 Example enriched dataset:
 
-| nct_id | title | conditions | interventions | sponsor | status |  brief_summary | start_date | completion_date |  intervention_category | extracted_drugs | ai_summary |
-
-
-|------|------|------|------|------|------|------|------|------|
-
-
-| NCT01234567 | Durvalumab in Breast Cancer | Breast Cancer | Durvalumab | AstraZeneca | Recruiting | Durvalumab and Tremelimumab in combination with first-line chemotherapy in the following indications: Ovarian/peritoneal/fallopian tube cancer, SCCHN, TNBC, SCLC and gastric/GEJ cancer, PDAC, ESCC. | 2016-04-28 | 2019-11-14 | Immunotherapy | Durvalumab | Trial evaluating PD-L1 inhibition in breast cancer patients. |
+| Field | Value |
+|---|---|
+| `nct_id` | NCT01234567 |
+| `title` | Durvalumab in Breast Cancer |
+| `conditions` | Breast Cancer |
+| `interventions` | Durvalumab |
+| `sponsor` | AstraZeneca |
+| `status` | Recruiting |
+| `brief_summary` | Durvalumab and Tremelimumab in combination with first-line chemotherapy in the following indications: Ovarian/peritoneal/fallopian tube cancer, SCCHN, TNBC, SCLC and gastric/GEJ cancer, PDAC, ESCC. |
+| `start_date` | 2016-04-28 |
+| `completion_date` | 2019-11-14 |
+| `intervention_category` | Immunotherapy |
+| `extracted_drugs` | Durvalumab |
+| `ai_summary` | Trial evaluating PD-L1 inhibition in breast cancer patients. |
 
 ---
 
