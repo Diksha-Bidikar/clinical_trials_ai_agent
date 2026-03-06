@@ -63,35 +63,30 @@ AI Trial Summaries
 
 Each study is summarized into concise insights.
 
-Structured Dataset Output
+Structured Dataset Output.
 
 Results are returned as an enriched research dataset.
 
 ---
 
-# Project Architecture
+## Project Architecture
 
 The system follows a modular AI pipeline:
-
-User Query
-│
-▼
-LLM Query Parsing
-│
-▼
-ClinicalTrials.gov Search
-│
-▼
-Trial Data Extraction
-│
-▼
-AI Processing
-├─ Intervention Categorization
-└─ Trial Summary Generation
-│
-▼
+```
+User Query  
+↓  
+LLM Query Parsing  
+↓  
+ClinicalTrials.gov API Search  
+↓  
+Trial Data Retrieval  
+↓  
+AI Processing  
+• Intervention Categorization  
+• Trial Summary Generation  
+↓  
 Enriched Clinical Trial Dataset
-
+```
 
 The system architecture and AI pipeline design are documented here:
 
@@ -101,28 +96,28 @@ The system architecture and AI pipeline design are documented here:
 ---
 
 # Project Structure
-
+```
 clinical_trials_ai_agent
 │
 ├── src
-│ ├── pipeline.py
-│ ├── seed_processing.py
-│ ├── trial_search.py
-│ ├── ai_processing.py
+│   ├── pipeline.py
+│   ├── seed_processing.py
+│   ├── trial_search.py
+│   ├── ai_processing.py
 │
 ├── notebooks
-│ └── clinical_trial_ai_agent.ipynb
+│   └── clinical_trial_ai_agent.ipynb
 │
 ├── data
-│ └── sample_trials.csv
+│   └── sample_trials.csv
 │
 ├── docs
-│ └── architecture.md
+│   └── architecture.md
 │
 ├── requirements.txt
 ├── .env
 └── README.md
-
+```
 
 ---
 
@@ -132,7 +127,7 @@ Follow these steps to run the AI agent locally.
 
 ### 1. Clone the repository
 
-git clone https://github.com/YOUR_USERNAME/clinical_trials_ai_agent.git
+git clone https://github.com/Diksha-Bidikar/clinical_trials_ai_agent.git
 
 cd clinical_trials_ai_agent
 
@@ -146,7 +141,7 @@ pip install -r requirements.txt
 
 Create a `.env` file in the project root and add your API key:
 
-ANTHROPIC_API_KEY=your_api_key_here
+ANTHROPIC_API_KEY = your_api_key_here
 
 
 ### 4. Run the AI agent
@@ -165,20 +160,25 @@ The system will:
 
 ---
 
-# Example Output
+## Example Output
 
-Example dataset fields:
-
+The AI agent generates an enriched clinical trial dataset with the following fields:
+```
 | Field | Description |
 |------|-------------|
-| NCT ID | Clinical trial identifier |
-| Title | Study title |
-| Condition | Target disease |
-| Intervention | Treatment |
-| Status | Recruitment status |
-| Intervention Category | AI classification |
-| Trial Summary | AI generated summary |
-
+| nct_id | Clinical trial identifier |
+| title | Study title |
+| conditions | Target disease or indication |
+| interventions | Treatment being studied |
+| sponsor | Trial sponsor organization |
+| status | Recruitment status |
+| brief_summary | Short description of the trial |
+| start_date | Trial start date |
+| completion_date | Expected completion date |
+| intervention_category | AI-derived intervention classification |
+| extracted_drugs | Drugs identified from intervention text |
+| ai_summary | LLM-generated concise trial summary |
+```
 ---
 
 # Technologies Used

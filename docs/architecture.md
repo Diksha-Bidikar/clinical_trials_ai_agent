@@ -18,7 +18,7 @@ The goal is to transform **unstructured research queries** into **structured cli
 # System Workflow
 
 The AI agent follows a multi-stage pipeline.
-
+```
 User Query
      │
      ▼
@@ -40,44 +40,35 @@ AI Processing
      │
      ▼
 Structured Clinical Intelligence Dataset
-
+```
 ---
 
 # Architecture Diagram
+```
 User Query
 (e.g. “breast cancer durvalumab by AstraZeneca”)
-
 ↓
-
 1. Seed Processing (LLM)
 
 Extract structured parameters
-
 ↓
-
 2. Trial Discovery
 
 Search ClinicalTrials.gov
-
 ↓
-
 3. Data Structuring
 
 Extract key trial metadata
-
 ↓
-
 4. AI Processing
 
 Categorize interventions
 Generate trial summaries
-
 ↓
-
 5. Enriched Clinical Dataset
 
 CSV / DataFrame output
-
+```
 
 ---
 
@@ -117,14 +108,13 @@ Benefits:
 File: src/trial_search.py
 
 
-Data Source: ClinicalTrials.gov API. (https://clinicaltrials.gov/api/v2/studies)
+Data Source: ClinicalTrials.gov API (https://clinicaltrials.gov/api/v2/studies)
 
 
 The module:
 
 • Queries trials based on extracted parameters  
-• Retrieves structured study metadata  
-• Handles pagination and result limits  
+• Retrieves structured study metadata 
 
 Key attributes extracted include:
 
@@ -175,7 +165,7 @@ This step enables **high-level therapeutic analysis** across trials.
 
 ## 4. AI Trial Summary Generation
 
-Also implemented in: src/ai_processing.py
+File: src/ai_processing.py
 
 Each trial is summarized using an LLM.
 
@@ -223,31 +213,25 @@ The final output contains:
 
 Example enriched dataset:
 
-| NCT ID | Condition | Intervention | Category | Summary |
-|------|------|------|------|------|
-| NCT0123456 | Breast Cancer | Durvalumab | Immunotherapy | Phase 2 trial evaluating PD-L1 blockade... |
+| nct_id | title | conditions | interventions | sponsor | status | intervention_category | extracted_drugs | ai_summary |
+|------|------|------|------|------|------|------|------|------|
+| NCT01234567 | Durvalumab in Breast Cancer | Breast Cancer | Durvalumab | AstraZeneca | Recruiting | Immunotherapy | Durvalumab | Trial evaluating PD-L1 inhibition in breast cancer patients. |
 
 ---
 
 # Technology Stack
 
-Programming Language
+Programming Language: Python
 
-Python
-
-Libraries
+Libraries: 
 
 • requests  
 • pandas  
 • anthropic (Claude API)  
 
-Data Sources
+Data Sources: ClinicalTrials.gov API  
 
-• ClinicalTrials.gov API  
-
-AI Model
-
-Claude LLM
+AI Model: Claude LLM
 
 ---
 
