@@ -2,6 +2,7 @@ from .seed_processing import process_seed_input_with_llm
 from .trial_search import collect_trial_data
 from .ai_processing import trial_dataset
 
+BASE_URL = "https://clinicaltrials.gov/api/v2/studies"
 
 def run_agent(seed_input, max_results=20):
 

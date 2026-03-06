@@ -1,6 +1,6 @@
 import anthropic
 import os
-from typing import Dict
+from typing import Dict, Any
 import pandas as pd
 
 CLAUDE_API_KEY = os.getenv("ANTHROPIC_API_KEY")

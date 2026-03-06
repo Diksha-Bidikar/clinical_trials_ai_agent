@@ -4,6 +4,7 @@ import json
 from typing import List, Dict, Any
 import anthropic
 
+BASE_URL = "https://clinicaltrials.gov/api/v2/studies"
 
 def collect_trial_data(parsed_seed: Dict[str, str], max_results: int = 20) -> pd.DataFrame:
     """
