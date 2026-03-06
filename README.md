@@ -1,32 +1,237 @@
-# AI Agent for Clinical Trial Intelligence
+# Clinical Trials AI Agent
 
-## Overview
-This project builds a prototype AI-assisted system that automatically
-discovers and structures information about clinical trials from public sources.
+An AI-powered research assistant that discovers, analyzes, and summarizes clinical trials from public biomedical data sources.
 
-The system retrieves clinical trial data using public APIs and organizes
-key attributes such as trial ID, intervention, sponsor, and status.
+This project demonstrates how Large Language Models can augment scientific data pipelines to transform natural language research questions into structured clinical insights.
 
-## Features
-- Automated clinical trial discovery
-- Structured extraction of trial metadata
-- AI-assisted summarization
-- Flexible seed query system
+---
 
-## Data Sources
-- ClinicalTrials.gov API
+# Project Motivation
 
-## Example Query
-"breast cancer durvalumab by AstraZeneca"
+Clinical trial databases contain massive amounts of biomedical data, but exploring them efficiently often requires complex queries and manual analysis.
 
-## Output
-Structured dataset containing:
-- Trial ID
-- Disease
-- Intervention
-- Sponsor
-- Status
-- Summary
+This project builds an **AI-assisted pipeline** that:
 
-## Tech Stack
-Python, Pandas, APIs, LLM tools
+• interprets natural language queries  
+• retrieves relevant clinical trials  
+• categorizes therapeutic interventions  
+• generates concise AI summaries  
+
+The result is a structured dataset that helps researchers quickly understand ongoing clinical research.
+
+---
+
+# Example Query
+
+User Input: breast cancer durvalumab by AstraZeneca
+
+
+AI Extracted Search Parameters:
+{
+"condition": "breast cancer",
+"intervention": "durvalumab",
+"sponsor": "AstraZeneca"
+}
+
+
+Retrieved trials are enriched with:
+
+• intervention classification  
+• AI-generated trial summaries  
+
+---
+
+# Key Features
+
+Natural Language Clinical Trial Search
+
+AI interprets free-text research queries.
+
+ClinicalTrials.gov Integration
+
+Automated retrieval of publicly available clinical trials.
+
+AI Intervention Categorization
+
+LLM categorizes therapies such as:
+
+• Immunotherapy  
+• Targeted therapy  
+• Combination therapy  
+
+AI Trial Summaries
+
+Each study is summarized into concise insights.
+
+Structured Dataset Output
+
+Results are returned as an enriched research dataset.
+
+---
+
+# Project Architecture
+
+The system follows a modular AI pipeline:
+
+User Query
+│
+▼
+LLM Query Parsing
+│
+▼
+ClinicalTrials.gov Search
+│
+▼
+Trial Data Extraction
+│
+▼
+AI Processing
+├─ Intervention Categorization
+└─ Trial Summary Generation
+│
+▼
+Enriched Clinical Trial Dataset
+
+
+The system architecture and AI pipeline design are documented here:
+
+- [Architecture Documentation](docs/architecture.md)
+- [Architecture Diagram](docs/architecture_diagram.md)
+
+---
+
+# Project Structure
+
+clinical_trials_ai_agent
+│
+├── src
+│ ├── pipeline.py
+│ ├── seed_processing.py
+│ ├── trial_search.py
+│ ├── ai_processing.py
+│
+├── notebooks
+│ └── clinical_trial_ai_agent.ipynb
+│
+├── data
+│ └── sample_trials.csv
+│
+├── docs
+│ └── architecture.md
+│
+├── requirements.txt
+├── .env
+└── README.md
+
+
+---
+
+## Quick Start
+
+Follow these steps to run the AI agent locally.
+
+### 1. Clone the repository
+
+git clone https://github.com/YOUR_USERNAME/clinical_trials_ai_agent.git
+
+cd clinical_trials_ai_agent
+
+
+### 2. Install dependencies
+
+pip install -r requirements.txt
+
+
+### 3. Set up environment variables
+
+Create a `.env` file in the project root and add your API key:
+
+ANTHROPIC_API_KEY=your_api_key_here
+
+
+### 4. Run the AI agent
+
+python3 test_agent.py
+
+
+The system will:
+
+1. Interpret the research query using an LLM
+2. Search ClinicalTrials.gov
+3. Retrieve relevant trials
+4. Categorize interventions
+5. Generate AI summaries
+6. Output enriched clinical trial results
+
+---
+
+# Example Output
+
+Example dataset fields:
+
+| Field | Description |
+|------|-------------|
+| NCT ID | Clinical trial identifier |
+| Title | Study title |
+| Condition | Target disease |
+| Intervention | Treatment |
+| Status | Recruitment status |
+| Intervention Category | AI classification |
+| Trial Summary | AI generated summary |
+
+---
+
+# Technologies Used
+
+Python
+
+Libraries
+
+• Pandas  
+• Requests  
+• Anthropic Claude API  
+
+Data Source
+
+ClinicalTrials.gov API
+
+---
+
+# Use Cases
+
+Biomedical Research
+
+Quick discovery of relevant clinical trials.
+
+Pharmaceutical Competitive Intelligence
+
+Track competitor trial activity.
+
+Academic Literature Exploration
+
+Identify active research in therapeutic areas.
+
+---
+
+# Future Improvements
+
+Potential enhancements include:
+
+• Vector similarity search for clinical trials  
+• Retrieval-Augmented Generation (RAG)  
+• Interactive research dashboard  
+• Clinical trial knowledge graphs  
+
+---
+
+# Author
+
+Diksha Bidikar
+
+Master's in Data Science — Rice University
+
+---
+
+# License
+
+MIT License
