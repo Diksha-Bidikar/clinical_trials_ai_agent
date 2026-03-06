@@ -199,13 +199,18 @@ The final output contains:
 
 | Field | Description |
 |------|-------------|
-| NCT ID | Clinical trial identifier |
-| Title | Study title |
-| Condition | Target disease |
-| Intervention | Treatment |
-| Status | Recruitment status |
-| Intervention Category | AI-derived classification |
-| Trial Summary | AI-generated summary |
+| nct_id | Clinical trial identifier |
+| title | Study title |
+| conditions | Target disease or indication |
+| interventions | Treatment being studied |
+| sponsor | Trial sponsor organization |
+| status | Recruitment status |
+| brief_summary | Short description of the trial |
+| start_date | Trial start date |
+| completion_date | Expected completion date |
+| intervention_category | AI-derived intervention classification |
+| extracted_drugs | Drugs identified from intervention text |
+| ai_summary | LLM-generated concise trial summary |
 
 ---
 
@@ -213,9 +218,9 @@ The final output contains:
 
 Example enriched dataset:
 
-| nct_id | title | conditions | interventions | sponsor | status | intervention_category | extracted_drugs | ai_summary |
+| nct_id | title | conditions | interventions | sponsor | status |  brief_summary | start_date | completion_date |intervention_category | extracted_drugs | ai_summary |
 |------|------|------|------|------|------|------|------|------|
-| NCT01234567 | Durvalumab in Breast Cancer | Breast Cancer | Durvalumab | AstraZeneca | Recruiting | Immunotherapy | Durvalumab | Trial evaluating PD-L1 inhibition in breast cancer patients. |
+| NCT01234567 | Durvalumab in Breast Cancer | Breast Cancer | Durvalumab | AstraZeneca | Recruiting | 	Durvalumab and Tremelimumab in combination with first-line chemotherapy in the following indications: Ovarian/peritoneal/fallopian tube cancer, SCCHN, TNBC, SCLC and gastric/GEJ cancer, PDAC, ESCC. | 2016-04-28 | 2019-11-14 | Immunotherapy | Durvalumab | Trial evaluating PD-L1 inhibition in breast cancer patients. |
 
 ---
 

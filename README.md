@@ -163,7 +163,7 @@ The system will:
 ## Example Output
 
 The AI agent generates an enriched clinical trial dataset with the following fields:
-```
+
 | Field | Description |
 |------|-------------|
 | nct_id | Clinical trial identifier |
@@ -178,7 +178,6 @@ The AI agent generates an enriched clinical trial dataset with the following fie
 | intervention_category | AI-derived intervention classification |
 | extracted_drugs | Drugs identified from intervention text |
 | ai_summary | LLM-generated concise trial summary |
-```
 ---
 
 # Technologies Used
@@ -186,14 +185,11 @@ The AI agent generates an enriched clinical trial dataset with the following fie
 Python
 
 Libraries
-
 • Pandas  
 • Requests  
 • Anthropic Claude API  
 
-Data Source
-
-ClinicalTrials.gov API
+Data Source: ClinicalTrials.gov API
 
 ---
 
