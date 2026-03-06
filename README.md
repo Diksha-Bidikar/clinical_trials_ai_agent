@@ -22,7 +22,7 @@ The result is a structured dataset that helps researchers quickly understand ong
 
 ---
 
-# Example Query
+# 📌 Example Query
 
 User Input: breast cancer durvalumab by AstraZeneca
 
@@ -70,7 +70,7 @@ Results are returned as an enriched research dataset.
 
 ---
 
-## Project Architecture
+## ✨ Project Architecture
 
 The system follows a modular AI pipeline:
 ```
@@ -181,7 +181,7 @@ The AI agent generates an enriched clinical trial dataset with the following fie
 | ai_summary | LLM-generated concise trial summary |
 ---
 
-# Technologies Used
+# 📌 Technologies Used
 
 Python
 
@@ -211,7 +211,7 @@ Identify active research in therapeutic areas.
 
 ---
 
-# Future Improvements
+# 🔮 Future Improvements
 
 Potential enhancements include:
 
@@ -223,9 +223,13 @@ Potential enhancements include:
 ---
 
 # 🔗 Connect With Me
+
 Author: Diksha Bidikar (Master's in Data Science, Rice University) 
+
 LinkedIn: linkedin.com/in/diksha-bidikar
+
 Portfolio: https://diksha-bidikar.github.io/
+
 Email: bidikar.diksha@gmail.com
 
 ---
